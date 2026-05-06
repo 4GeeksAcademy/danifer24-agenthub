@@ -44,29 +44,77 @@ async function setSection(sectionName) {
 }
 
 function closeAllDropdowns() {
-  sectionContent.querySelectorAll('[id^="drop-"]').forEach((d) => d.classList.add("hidden"));
+  sectionContent.querySelectorAll('[id^="drop-"]').forEach((d) => {
+    d.classList.add("hidden");
+    d.classList.remove("fixed");
+    d.style.top = "";
+    d.style.left = "";
+  });
 }
 
-window.toggleDropdown = function (id) {
+window.toggleDropdown = function (event, id) {
+  if (event) event.stopPropagation();
+
+  const button =
+    event?.currentTarget ||
+    event?.target?.closest("button");
+
   const dropdown = document.getElementById(id);
-  if (!dropdown) return;
-  sectionContent.querySelectorAll('[id^="drop-"]').forEach((d) => {
-    if (d.id !== id) d.classList.add("hidden");
-  });
-  dropdown.classList.toggle("hidden");
+  if (!dropdown || !button) return;
+
+  const wasHidden = dropdown.classList.contains("hidden");
+  closeAllDropdowns();
+  if (!wasHidden) return;
+
+  dropdown.classList.remove("hidden");
+  dropdown.classList.add("fixed", "z-[120]");
+
+  const rect = button.getBoundingClientRect();
+
+  // Mostrar primero para medir tamaño real
+  const menuWidth = dropdown.offsetWidth || 176;
+  const menuHeight = dropdown.offsetHeight || 96;
+
+  let left = rect.right - menuWidth;
+  let top = rect.bottom + 8;
+
+  // límites viewport
+  if (left < 8) left = 8;
+  if (left + menuWidth > window.innerWidth - 8) {
+    left = window.innerWidth - menuWidth - 8;
+  }
+
+  // si no cabe abajo, abrir arriba
+  if (top + menuHeight > window.innerHeight - 8) {
+    top = Math.max(8, rect.top - menuHeight - 8);
+  }
+
+  dropdown.style.left = `${left}px`;
+  dropdown.style.top = `${top}px`;
 };
 
 window.openModal = function (id) {
   const modal = document.getElementById(id);
   if (!modal) return;
-  modal.classList.remove("hidden");
+
   closeAllDropdowns();
+
+  // Asegura layout de overlay centrado
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+
+  // Evita scroll del fondo
+  document.body.classList.add("overflow-hidden");
 };
 
 window.closeModal = function (id) {
   const modal = document.getElementById(id);
   if (!modal) return;
+
   modal.classList.add("hidden");
+  modal.classList.remove("flex");
+
+  document.body.classList.remove("overflow-hidden");
 };
 
 document.querySelectorAll(".js-nav-link").forEach((link) => {
@@ -91,8 +139,8 @@ const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") document.documentElement.classList.add("dark");
 else document.documentElement.classList.remove("dark");
 
-window.addEventListener("click", function (e) {
-  if (!e.target.closest("button") && !e.target.closest('[id^="drop-"]')) {
+window.addEventListener("click", (e) => {
+  if (!e.target.closest("[data-dropdown-root]") && !e.target.closest('[id^="drop-"]')) {
     closeAllDropdowns();
   }
 });

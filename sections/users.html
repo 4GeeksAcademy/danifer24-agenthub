@@ -5,59 +5,152 @@
     </div>
 </div>
 
-<div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
-    <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/30">
-        <h3 class="font-h3 text-h3">Platform Users</h3>
+<div class="space-y-6">
+    <div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Gestión de Usuarios</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Administra cuentas, planes y estado de acceso.</p>
     </div>
-    <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse">
-            <thead>
-                <tr class="text-label-sm text-slate-500 border-b border-slate-100 bg-slate-50/50">
-                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Name</th>
-                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Email</th>
-                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Plan</th>
-                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Status</th>
-                    <th class="px-6 py-4 font-semibold uppercase tracking-wider text-right">Actions</th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-                <tr class="hover:bg-slate-50 transition-colors group">
-                    <td class="px-6 py-4 font-medium text-slate-900">Julian Schmidt</td>
-                    <td class="px-6 py-4 text-slate-600">julian.s@agenthub.io</td>
-                    <td class="px-6 py-4"><span
-                            class="px-2 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">Enterprise</span>
-                    </td>
-                    <td class="px-6 py-4"><span
-                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">Active</span>
-                    </td>
-                    <td class="px-6 py-4 text-right relative">
-                        <button class="p-2 rounded-lg hover:bg-slate-200/50 text-slate-400 transition-colors"
-                            onclick="toggleDropdown('drop-1')">
-                            <span class="material-symbols-outlined">more_vert</span>
-                        </button>
-                        <div class="hidden absolute right-6 top-12 w-48 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1 overflow-hidden"
-                            id="drop-1">
-                            <button class="w-full text-left px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50"
-                                onclick="openModal('julian-modal')">View Details</button>
-                            <button
-                                class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error-container/20 border-t border-slate-50">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+
+    <div
+        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-visible">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr
+                        class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40">
+                        <th class="px-6 py-4 font-semibold">Nombre</th>
+                        <th class="px-6 py-4 font-semibold">Email</th>
+                        <th class="px-6 py-4 font-semibold">Plan</th>
+                        <th class="px-6 py-4 font-semibold">Estado</th>
+                        <th class="px-6 py-4 font-semibold text-right">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Ana Pérez</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">ana@empresa.com</td>
+                        <td class="px-6 py-4"><span
+                                class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-semibold">Pro</span>
+                        </td>
+                        <td class="px-6 py-4"><span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">activo</span>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-user-1')" aria-label="Acciones">⋮</button>
+                                <div id="drop-user-1"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('user-modal-1')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Luis Gómez</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">luis@acme.io</td>
+                        <td class="px-6 py-4"><span
+                                class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-semibold">Enterprise</span>
+                        </td>
+                        <td class="px-6 py-4"><span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-xs font-bold">inactivo</span>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-user-2')" aria-label="Acciones">⋮</button>
+                                <div id="drop-user-2"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('user-modal-2')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">María Ruiz</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">maria@startup.dev</td>
+                        <td class="px-6 py-4"><span
+                                class="px-2 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-semibold">Starter</span>
+                        </td>
+                        <td class="px-6 py-4"><span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">activo</span>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-user-3')" aria-label="Acciones">⋮</button>
+                                <div id="drop-user-3"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('user-modal-3')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
-<div class="hidden fixed inset-0 z-[60] flex items-center justify-center p-6" id="julian-modal">
-    <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
-        onclick="closeModal('julian-modal')"></div>
+<!-- Modales detalle -->
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="user-modal-1">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('user-modal-1')"></div>
     <div
-        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-8">
-        <button class="absolute top-4 right-4 text-slate-500" onclick="closeModal('julian-modal')">
-            <span class="material-symbols-outlined">close</span>
-        </button>
-        <h2 class="text-h2 font-h2 mb-4">Julian Schmidt</h2>
-        <p class="text-slate-600">julian.s@agenthub.io</p>
+        class="relative bg-white dark:bg-slate-900 w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('user-modal-1')">✕</button>
+        <h3 class="text-xl font-semibold mb-4">Detalle de usuario</h3>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
+            <li><strong>Nombre:</strong> Ana Pérez</li>
+            <li><strong>Email:</strong> ana@empresa.com</li>
+            <li><strong>Plan:</strong> Pro</li>
+            <li><strong>Estado:</strong> activo</li>
+            <li><strong>Empresa:</strong> NovaTech</li>
+        </ul>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="user-modal-2">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('user-modal-2')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('user-modal-2')">✕</button>
+        <h3 class="text-xl font-semibold mb-4">Detalle de usuario</h3>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
+            <li><strong>Nombre:</strong> Luis Gómez</li>
+            <li><strong>Email:</strong> luis@acme.io</li>
+            <li><strong>Plan:</strong> Enterprise</li>
+            <li><strong>Estado:</strong> inactivo</li>
+            <li><strong>Empresa:</strong> ACME Corp</li>
+        </ul>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="user-modal-3">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('user-modal-3')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('user-modal-3')">✕</button>
+        <h3 class="text-xl font-semibold mb-4">Detalle de usuario</h3>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-200">
+            <li><strong>Nombre:</strong> María Ruiz</li>
+            <li><strong>Email:</strong> maria@startup.dev</li>
+            <li><strong>Plan:</strong> Starter</li>
+            <li><strong>Estado:</strong> activo</li>
+            <li><strong>Empresa:</strong> Startup Dev</li>
+        </ul>
     </div>
 </div>
