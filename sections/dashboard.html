@@ -4,6 +4,52 @@
         <p class="text-slate-500 font-body-md mt-1">Overview general de la plataforma.</p>
     </div>
 </div>
-<div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 p-10 text-center text-slate-500">
-    Placeholder Dashboard (se completa en el siguiente commit).
+<div class="space-y-6">
+    <div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Dashboard</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Resumen general de rendimiento de AgentHub.
+        </p>
+    </div>
+
+    <!-- Métricas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <article class="rounded-xl p-5 shadow-sm border border-emerald-200 dark:border-emerald-900 bg-white dark:bg-slate-900">
+            <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Ingresos mensuales</p>
+                <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400">paid</span>
+            </div>
+            <p class="mt-3 text-3xl font-extrabold text-emerald-700 dark:text-emerald-300">$48,200</p>
+        </article>
+
+        <article class="rounded-xl p-5 shadow-sm border border-amber-200 dark:border-amber-900 bg-white dark:bg-slate-900">
+            <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Pérdidas por descuentos</p>
+                <span class="material-symbols-outlined text-amber-600 dark:text-amber-400">trending_down</span>
+            </div>
+            <p class="mt-3 text-3xl font-extrabold text-amber-700 dark:text-amber-300">$3,900</p>
+        </article>
+
+        <article class="rounded-xl p-5 shadow-sm border border-blue-200 dark:border-blue-900 bg-white dark:bg-slate-900">
+            <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Agentes activos</p>
+                <span class="material-symbols-outlined text-blue-600 dark:text-blue-400">smart_toy</span>
+            </div>
+            <p class="mt-3 text-3xl font-extrabold text-blue-700 dark:text-blue-300">126</p>
+        </article>
+
+        <article class="rounded-xl p-5 shadow-sm border border-rose-200 dark:border-rose-900 bg-white dark:bg-slate-900">
+            <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Agentes fallando</p>
+                <span class="material-symbols-outlined text-rose-600 dark:text-rose-400">warning</span>
+            </div>
+            <p class="mt-3 text-3xl font-extrabold text-rose-700 dark:text-rose-300">7</p>
+        </article>
+    </div>
+
+    <!-- Placeholder gráfico -->
+    <section
+        class="w-full h-72 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 shadow-sm grid place-items-center">
+        <p class="text-slate-500 dark:text-slate-400 font-medium">Weekly Activity Chart</p>
+    </section>
 </div>
