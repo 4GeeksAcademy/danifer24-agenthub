@@ -1,3 +1,184 @@
-<div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-500">
-    Sección Agents (pendiente)
+<div class="space-y-6">
+    <div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Gestión de Agentes</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Administra estado, skills y configuración de agentes.
+        </p>
+    </div>
+
+    <div
+        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-visible">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr
+                        class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40">
+                        <th class="px-6 py-4 font-semibold">Agente</th>
+                        <th class="px-6 py-4 font-semibold">Propietario</th>
+                        <th class="px-6 py-4 font-semibold">Estado</th>
+                        <th class="px-6 py-4 font-semibold">Skills</th>
+                        <th class="px-6 py-4 font-semibold text-right">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">SalesCopilot</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Ana Pérez</td>
+                        <td class="px-6 py-4">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">activo</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400"
+                                onclick="toggleSkills('skills-agent-1', this)">
+                                <span
+                                    class="material-symbols-outlined text-base transition-transform">expand_more</span>
+                                Ver skills
+                            </button>
+                            <div id="skills-agent-1" class="mt-2 hidden">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">CRM
+                                        Sync</span>
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">Lead
+                                        Scoring</span>
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">Email
+                                        Outreach</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-agent-1')" aria-label="Acciones">⋮</button>
+                                <div id="drop-agent-1"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('agent-modal-1')">Configurar</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">SupportBot</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Luis Gómez</td>
+                        <td class="px-6 py-4">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 text-xs font-bold">fallando</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400"
+                                onclick="toggleSkills('skills-agent-2', this)">
+                                <span
+                                    class="material-symbols-outlined text-base transition-transform">expand_more</span>
+                                Ver skills
+                            </button>
+                            <div id="skills-agent-2" class="mt-2 hidden">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">Ticket
+                                        Routing</span>
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">Sentiment
+                                        Analysis</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-agent-2')" aria-label="Acciones">⋮</button>
+                                <div id="drop-agent-2"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('agent-modal-2')">Configurar</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">FinanceAgent</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">María Ruiz</td>
+                        <td class="px-6 py-4">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-xs font-bold">inactivo</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400"
+                                onclick="toggleSkills('skills-agent-3', this)">
+                                <span
+                                    class="material-symbols-outlined text-base transition-transform">expand_more</span>
+                                Ver skills
+                            </button>
+                            <div id="skills-agent-3" class="mt-2 hidden">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">Invoice
+                                        Parsing</span>
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">Risk
+                                        Alerts</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-agent-3')" aria-label="Acciones">⋮</button>
+                                <div id="drop-agent-3"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('agent-modal-3')">Configurar</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modales de configuración -->
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="agent-modal-1">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('agent-modal-1')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('agent-modal-1')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">Configurar agente: SalesCopilot</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">Prompt base del agente:</p>
+        <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">You are SalesCopilot.
+Prioritize concise business responses.
+Escalate when confidence &lt; 0.7.</pre>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="agent-modal-2">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('agent-modal-2')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('agent-modal-2')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">Configurar agente: SupportBot</h3>
+        <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">You are SupportBot.
+Use empathetic tone.
+If issue is billing-related, route to Finance team.</pre>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="agent-modal-3">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('agent-modal-3')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('agent-modal-3')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">Configurar agente: FinanceAgent</h3>
+        <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">You are FinanceAgent.
+Validate invoice fields.
+Flag anomalies above threshold.</pre>
+    </div>
 </div>

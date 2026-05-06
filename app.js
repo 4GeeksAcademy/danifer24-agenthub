@@ -117,6 +117,15 @@ window.closeModal = function (id) {
   document.body.classList.remove("overflow-hidden");
 };
 
+window.toggleSkills = function (id, buttonEl) {
+  const panel = document.getElementById(id);
+  if (!panel) return;
+
+  const icon = buttonEl?.querySelector(".material-symbols-outlined");
+  panel.classList.toggle("hidden");
+  if (icon) icon.classList.toggle("rotate-180", !panel.classList.contains("hidden"));
+};
+
 document.querySelectorAll(".js-nav-link").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
