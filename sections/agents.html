@@ -139,6 +139,45 @@
                             </div>
                         </td>
                     </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">OpsAssistant</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Sofía Torres</td>
+                        <td class="px-6 py-4">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">activo</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400"
+                                onclick="toggleSkills('skills-agent-4', this)">
+                                <span
+                                    class="material-symbols-outlined text-base transition-transform">expand_more</span>
+                                Ver skills
+                            </button>
+                            <div id="skills-agent-4" class="mt-2 hidden">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">Ticket
+                                        Routing</span>
+                                    <span class="px-2 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800">Lead
+                                        Scoring</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-agent-4')" aria-label="Acciones">⋮</button>
+                                <div id="drop-agent-4"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('agent-modal-4')">Configurar</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -180,5 +219,17 @@ If issue is billing-related, route to Finance team.</pre>
         <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">You are FinanceAgent.
 Validate invoice fields.
 Flag anomalies above threshold.</pre>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="agent-modal-4">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('agent-modal-4')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('agent-modal-4')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">Configurar agente: OpsAssistant</h3>
+        <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">You are OpsAssistant.
+Prioritize operations workflow triage.
+Escalate urgent tickets automatically.</pre>
     </div>
 </div>

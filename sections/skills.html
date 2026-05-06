@@ -89,6 +89,27 @@
                             </div>
                         </td>
                     </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Invoice Parsing</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Extrae campos clave desde facturas PDF
+                            y OCR.</td>
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">1</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-skill-4')" aria-label="Acciones">⋮</button>
+                                <div id="drop-skill-4"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('skill-modal-4')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -124,5 +145,15 @@
         <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('skill-modal-3')">✕</button>
         <h3 class="text-xl font-semibold mb-3">Ticket Routing</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300">Clasifica y deriva tickets por prioridad y dominio.</p>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="skill-modal-4">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('skill-modal-4')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('skill-modal-4')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">Invoice Parsing</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300">Parseo de facturas y validación de campos fiscales.</p>
     </div>
 </div>

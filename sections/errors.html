@@ -98,6 +98,72 @@
                             </div>
                         </td>
                     </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">2026-05-06 07:45:20</td>
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">OpsAssistant</td>
+                        <td class="px-6 py-4"><span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold">warning</span>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Reintento de webhook por rate limit.
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-error-4')" aria-label="Acciones">⋮</button>
+                                <div id="drop-error-4"
+                                    class="hidden w-48 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('error-modal-4')">Ver detalle</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">2026-05-05 22:30:02</td>
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">SupportBot</td>
+                        <td class="px-6 py-4"><span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 text-xs font-bold">crítico</span>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Error de autenticación en API externa.
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-error-5')" aria-label="Acciones">⋮</button>
+                                <div id="drop-error-5"
+                                    class="hidden w-48 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('error-modal-5')">Ver detalle</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">2026-05-05 21:08:44</td>
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">SalesCopilot</td>
+                        <td class="px-6 py-4"><span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">info</span>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Latencia alta detectada (degradación
+                            leve).</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-error-6')" aria-label="Acciones">⋮</button>
+                                <div id="drop-error-6"
+                                    class="hidden w-48 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('error-modal-6')">Ver detalle</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -140,5 +206,32 @@ outputTokens: 1024</pre>
         <h3 class="text-xl font-semibold mb-3">FinanceAgent — ValidationInfo</h3>
         <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">[2026-05-06T08:11:49Z] Info: Optional field `supplier_phone` missing.
 Fallback strategy used: `continue_with_partial_payload=true`.</pre>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="error-modal-4">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('error-modal-4')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('error-modal-4')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">OpsAssistant — WebhookRetryWarning</h3>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="error-modal-5">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('error-modal-5')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('error-modal-5')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">SupportBot — AuthError</h3>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="error-modal-6">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('error-modal-6')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('error-modal-6')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">SalesCopilot — LatencyInfo</h3>
     </div>
 </div>
