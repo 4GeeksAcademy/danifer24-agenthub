@@ -18,10 +18,19 @@ function applyActiveNav(sectionName) {
     link.classList.toggle("dark:bg-blue-900/20", active);
     link.classList.toggle("border-r-2", active);
     link.classList.toggle("border-blue-600", active);
-
     link.classList.toggle("text-slate-500", !active);
     link.classList.toggle("dark:text-slate-400", !active);
+
+    link.setAttribute("aria-current", active ? "page" : "false");
   });
+}
+
+function updateThemeIcon() {
+  const icon = document.querySelector("#theme-toggle .material-symbols-outlined");
+  if (!icon) return;
+  const isDark = document.documentElement.classList.contains("dark");
+  icon.textContent = isDark ? "light_mode" : "dark_mode";
+  document.getElementById("theme-toggle")?.setAttribute("aria-pressed", String(isDark));
 }
 
 async function setSection(sectionName) {
@@ -30,10 +39,13 @@ async function setSection(sectionName) {
 
   try {
     const res = await fetch(file);
+    if (!res.ok) throw new Error("fetch failed");
+
     const html = await res.text();
     sectionContent.innerHTML = html;
     applyActiveNav(sectionName);
     closeAllDropdowns();
+    localStorage.setItem("lastSection", sectionName);
   } catch {
     sectionContent.innerHTML = `
       <div class="rounded-xl border border-red-200 bg-red-50 p-4 text-red-700">
@@ -141,12 +153,14 @@ if (themeToggle) {
       "theme",
       document.documentElement.classList.contains("dark") ? "dark" : "light"
     );
+    updateThemeIcon();
   });
 }
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") document.documentElement.classList.add("dark");
 else document.documentElement.classList.remove("dark");
+updateThemeIcon();
 
 window.addEventListener("click", (e) => {
   if (!e.target.closest("[data-dropdown-root]") && !e.target.closest('[id^="drop-"]')) {
@@ -154,4 +168,20 @@ window.addEventListener("click", (e) => {
   }
 });
 
-setSection("dashboard");
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelectorAll('[id$="-modal"]').forEach((modal) => {
+      if (!modal.classList.contains("hidden")) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    });
+    document.body.classList.remove("overflow-hidden");
+    closeAllDropdowns();
+  }
+});
+
+window.addEventListener("resize", closeAllDropdowns);
+window.addEventListener("scroll", closeAllDropdowns, true);
+
+setSection(localStorage.getItem("lastSection") || "dashboard");
