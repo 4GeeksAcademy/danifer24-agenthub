@@ -1,0 +1,63 @@
+<div class="flex justify-between items-end mb-8">
+    <div>
+        <h2 class="font-h1 text-h1 text-on-background tracking-tight">User Management</h2>
+        <p class="text-slate-500 font-body-md mt-1">Manage platform access and orchestration permissions.</p>
+    </div>
+</div>
+
+<div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+    <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/30">
+        <h3 class="font-h3 text-h3">Platform Users</h3>
+    </div>
+    <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+            <thead>
+                <tr class="text-label-sm text-slate-500 border-b border-slate-100 bg-slate-50/50">
+                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Name</th>
+                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Email</th>
+                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Plan</th>
+                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Status</th>
+                    <th class="px-6 py-4 font-semibold uppercase tracking-wider text-right">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50 transition-colors group">
+                    <td class="px-6 py-4 font-medium text-slate-900">Julian Schmidt</td>
+                    <td class="px-6 py-4 text-slate-600">julian.s@agenthub.io</td>
+                    <td class="px-6 py-4"><span
+                            class="px-2 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">Enterprise</span>
+                    </td>
+                    <td class="px-6 py-4"><span
+                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">Active</span>
+                    </td>
+                    <td class="px-6 py-4 text-right relative">
+                        <button class="p-2 rounded-lg hover:bg-slate-200/50 text-slate-400 transition-colors"
+                            onclick="toggleDropdown('drop-1')">
+                            <span class="material-symbols-outlined">more_vert</span>
+                        </button>
+                        <div class="hidden absolute right-6 top-12 w-48 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1 overflow-hidden"
+                            id="drop-1">
+                            <button class="w-full text-left px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50"
+                                onclick="openModal('julian-modal')">View Details</button>
+                            <button
+                                class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error-container/20 border-t border-slate-50">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[60] flex items-center justify-center p-6" id="julian-modal">
+    <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
+        onclick="closeModal('julian-modal')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-8">
+        <button class="absolute top-4 right-4 text-slate-500" onclick="closeModal('julian-modal')">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <h2 class="text-h2 font-h2 mb-4">Julian Schmidt</h2>
+        <p class="text-slate-600">julian.s@agenthub.io</p>
+    </div>
+</div>

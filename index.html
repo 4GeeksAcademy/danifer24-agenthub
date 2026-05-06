@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="light" lang="es">
 
 <head>
@@ -7,14 +6,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>AgentHub - Panel de Administración</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -133,470 +129,60 @@
                 <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Orchestration Layer</p>
             </div>
         </div>
+
         <nav class="flex-1 space-y-1 px-3">
-            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 border-r-2 border-blue-600 transition-all"
+            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 border-r-2 border-blue-600"
                 data-section="dashboard" href="#">
-                <span class="material-symbols-outlined">dashboard</span>
-                <span class="font-inter text-sm font-medium">Dashboard</span>
+                <span class="material-symbols-outlined">dashboard</span><span
+                    class="text-sm font-medium">Dashboard</span>
             </a>
-            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all"
+            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                 data-section="users" href="#">
-                <span class="material-symbols-outlined">group</span>
-                <span class="font-inter text-sm font-medium">Users</span>
+                <span class="material-symbols-outlined">group</span><span class="text-sm font-medium">Users</span>
             </a>
-            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all"
+            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                 data-section="agents" href="#">
-                <span class="material-symbols-outlined">smart_toy</span>
-                <span class="font-inter text-sm font-medium">Agents</span>
+                <span class="material-symbols-outlined">smart_toy</span><span class="text-sm font-medium">Agents</span>
             </a>
-            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all"
+            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                 data-section="skills" href="#">
-                <span class="material-symbols-outlined">psychology</span>
-                <span class="font-inter text-sm font-medium">Skills</span>
+                <span class="material-symbols-outlined">psychology</span><span class="text-sm font-medium">Skills</span>
             </a>
-            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all"
+            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                 data-section="contracts" href="#">
-                <span class="material-symbols-outlined">description</span>
-                <span class="font-inter text-sm font-medium">Contracts</span>
+                <span class="material-symbols-outlined">description</span><span
+                    class="text-sm font-medium">Contracts</span>
             </a>
-            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all"
+            <a class="js-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                 data-section="errors" href="#">
-                <span class="material-symbols-outlined">terminal</span>
-                <span class="font-inter text-sm font-medium">Error Logs</span>
+                <span class="material-symbols-outlined">terminal</span><span class="text-sm font-medium">Error
+                    Logs</span>
             </a>
         </nav>
-        <div class="px-3 mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all"
-                href="#">
-                <span class="material-symbols-outlined">settings</span>
-                <span class="font-inter text-sm font-medium">Settings</span>
-            </a>
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all"
-                href="#">
-                <span class="material-symbols-outlined">help_outline</span>
-                <span class="font-inter text-sm font-medium">Support</span>
-            </a>
-        </div>
     </aside>
-    <!-- Main Content -->
+
     <main class="ml-[280px] min-h-screen">
-        <!-- TopAppBar -->
         <header
             class="fixed top-0 right-0 left-[280px] z-40 flex items-center justify-between px-6 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
             <div class="flex items-center bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg w-96">
                 <span class="material-symbols-outlined text-slate-400 text-sm mr-2">search</span>
                 <input
                     class="bg-transparent border-none focus:ring-0 text-sm text-slate-900 dark:text-white w-full placeholder:text-slate-400"
-                    placeholder="Search users..." type="text" />
+                    placeholder="Search..." type="text" />
             </div>
-            <div class="flex items-center gap-4">
-                <button
-                    class="p-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors"
-                    id="theme-toggle" aria-label="Cambiar tema">
-                    <span class="material-symbols-outlined">dark_mode</span>
-                </button>
-                <div class="h-8 w-8 rounded-full overflow-hidden border border-slate-200 cursor-pointer">
-                    <img alt="User profile" class="h-full w-full object-cover"
-                        data-alt="A professional headshot of a corporate executive in a modern tech office. The lighting is soft and natural, emphasizing a bright, trustworthy aesthetic. The background features blurred architectural glass and steel, echoing the analytical and reliable brand identity of AgentHub."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGuoAlCsvu6_ddngrTSZPB0BqIhJ0wxWO1qwAf_k3pd6ao4AaXU8gECuwRRUMRKNpvMMpe13mgTGJ3VRSexYmjusO0vfQLLDvuOa8fdkQNxx1USudz0fdbSq5et_2_Ie8luWVHKWL2UxjnFlWpvbcpqgk_RTFXU4jRwLG0n5lbVQiwh9DkFoBrpW6jcrLTzN_JtZ-fckcD3DoU_dDYZaTN6ZCf8p5ywRc-yrqflG4qvXifETWrsgSammgwToWxiy7nKCj3_RD5_BX" />
-                </div>
-            </div>
+            <button
+                class="p-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors"
+                id="theme-toggle" aria-label="Cambiar tema">
+                <span class="material-symbols-outlined">dark_mode</span>
+            </button>
         </header>
-        <!-- Canvas -->
+
         <div class="pt-24 px-lg pb-lg">
-            <section id="section-dashboard" class="js-section">
-                <div class="flex justify-between items-end mb-8">
-                    <div>
-                        <h2 class="font-h1 text-h1 text-on-background tracking-tight">Dashboard</h2>
-                        <p class="text-slate-500 font-body-md mt-1">Overview general de la plataforma.</p>
-                    </div>
-                </div>
-                <div
-                    class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 p-10 text-center text-slate-500">
-                    Placeholder Dashboard (se completa en el siguiente commit).
-                </div>
-            </section>
-
-            <section id="section-users" class="js-section hidden">
-                <div class="flex justify-between items-end mb-8">
-                    <div>
-                        <h2 class="font-h1 text-h1 text-on-background tracking-tight">User Management</h2>
-                        <p class="text-slate-500 font-body-md mt-1">Manage platform access and orchestration
-                            permissions.
-                        </p>
-                    </div>
-                </div>
-                <!-- Dashboard Stats Bento Area -->
-                <div class="grid grid-cols-12 gap-gutter mb-8">
-                    <div class="col-span-12 md:col-span-4 bg-white border border-slate-200 p-md rounded-xl shadow-sm">
-                        <p class="text-label-sm text-slate-500 uppercase tracking-wider mb-2">Total Users</p>
-                        <div class="flex items-baseline gap-3">
-                            <h3 class="text-h1 font-h1">1,284</h3>
-                            <span
-                                class="text-emerald-600 text-xs font-bold bg-emerald-50 px-1.5 py-0.5 rounded flex items-center">
-                                <span class="material-symbols-outlined text-[12px]">trending_up</span> 12%
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-span-12 md:col-span-4 bg-white border border-slate-200 p-md rounded-xl shadow-sm">
-                        <p class="text-label-sm text-slate-500 uppercase tracking-wider mb-2">Active Sessions</p>
-                        <div class="flex items-baseline gap-3">
-                            <h3 class="text-h1 font-h1">412</h3>
-                            <span class="text-slate-400 text-xs font-medium">Currently online</span>
-                        </div>
-                    </div>
-                    <div class="col-span-12 md:col-span-4 bg-white border border-slate-200 p-md rounded-xl shadow-sm">
-                        <p class="text-label-sm text-slate-500 uppercase tracking-wider mb-2">API Usage</p>
-                        <div class="flex items-baseline gap-3">
-                            <h3 class="text-h1 font-h1">89%</h3>
-                            <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden ml-4">
-                                <div class="h-full bg-primary w-[89%] rounded-full"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Table Card -->
-                <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
-                    <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/30">
-                        <h3 class="font-h3 text-h3">Platform Users</h3>
-                        <div class="flex gap-2">
-                            <button class="p-2 text-slate-400 hover:text-slate-600 transition-colors">
-                                <span class="material-symbols-outlined">filter_list</span>
-                            </button>
-                            <button class="p-2 text-slate-400 hover:text-slate-600 transition-colors">
-                                <span class="material-symbols-outlined">download</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left border-collapse">
-                            <thead>
-                                <tr class="text-label-sm text-slate-500 border-b border-slate-100 bg-slate-50/50">
-                                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Name</th>
-                                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Email</th>
-                                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Plan</th>
-                                    <th class="px-6 py-4 font-semibold uppercase tracking-wider">Status</th>
-                                    <th class="px-6 py-4 font-semibold uppercase tracking-wider text-right">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-100">
-                                <!-- Row 1 -->
-                                <tr class="hover:bg-slate-50 transition-colors group">
-                                    <td class="px-6 py-4">
-                                        <div class="flex items-center gap-3">
-                                            <div
-                                                class="w-9 h-9 rounded-lg bg-primary-container text-white flex items-center justify-center font-bold text-sm">
-                                                JS</div>
-                                            <div class="font-medium text-slate-900">Julian Schmidt</div>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 text-slate-600 font-body-md">julian.s@agenthub.io</td>
-                                    <td class="px-6 py-4">
-                                        <span
-                                            class="px-2 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">Enterprise</span>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        <span
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                                            Active
-                                        </span>
-                                    </td>
-                                    <td class="px-6 py-4 text-right relative">
-                                        <button
-                                            class="p-2 rounded-lg hover:bg-slate-200/50 text-slate-400 transition-colors"
-                                            onclick="toggleDropdown('drop-1')">
-                                            <span class="material-symbols-outlined">more_vert</span>
-                                        </button>
-                                        <!-- Dropdown -->
-                                        <div class="hidden absolute right-6 top-12 w-48 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1 overflow-hidden"
-                                            id="drop-1">
-                                            <button
-                                                class="w-full text-left px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-2"
-                                                onclick="openModal('julian-modal')">
-                                                <span class="material-symbols-outlined text-sm">visibility</span> View
-                                                Details
-                                            </button>
-                                            <button
-                                                class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error-container/20 flex items-center gap-2 border-t border-slate-50">
-                                                <span class="material-symbols-outlined text-sm">delete</span> Delete
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <!-- Row 2 -->
-                                <tr class="hover:bg-slate-50 transition-colors group">
-                                    <td class="px-6 py-4">
-                                        <div class="flex items-center gap-3">
-                                            <div
-                                                class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-sm">
-                                                LM</div>
-                                            <div class="font-medium text-slate-900">Lena Meyer</div>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 text-slate-600 font-body-md">l.meyer@techcorp.com</td>
-                                    <td class="px-6 py-4">
-                                        <span
-                                            class="px-2 py-1 rounded-md bg-blue-100 text-blue-700 text-xs font-semibold">Pro</span>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        <span
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-500 text-xs font-bold">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
-                                            Inactive
-                                        </span>
-                                    </td>
-                                    <td class="px-6 py-4 text-right relative">
-                                        <button
-                                            class="p-2 rounded-lg hover:bg-slate-200/50 text-slate-400 transition-colors"
-                                            onclick="toggleDropdown('drop-2')">
-                                            <span class="material-symbols-outlined">more_vert</span>
-                                        </button>
-                                        <div class="hidden absolute right-6 top-12 w-48 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1 overflow-hidden"
-                                            id="drop-2">
-                                            <button
-                                                class="w-full text-left px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-2">
-                                                <span class="material-symbols-outlined text-sm">visibility</span> View
-                                                Details
-                                            </button>
-                                            <button
-                                                class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error-container/20 flex items-center gap-2 border-t border-slate-50">
-                                                <span class="material-symbols-outlined text-sm">delete</span> Delete
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <!-- Row 3 -->
-                                <tr class="hover:bg-slate-50 transition-colors group">
-                                    <td class="px-6 py-4">
-                                        <div class="flex items-center gap-3">
-                                            <div
-                                                class="w-9 h-9 rounded-lg bg-tertiary-container text-white flex items-center justify-center font-bold text-sm">
-                                                AB</div>
-                                            <div class="font-medium text-slate-900">Arjun Bhasin</div>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 text-slate-600 font-body-md">arjun.b@startup.io</td>
-                                    <td class="px-6 py-4">
-                                        <span
-                                            class="px-2 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">Free</span>
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        <span
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                                            Active
-                                        </span>
-                                    </td>
-                                    <td class="px-6 py-4 text-right relative">
-                                        <button
-                                            class="p-2 rounded-lg hover:bg-slate-200/50 text-slate-400 transition-colors"
-                                            onclick="toggleDropdown('drop-3')">
-                                            <span class="material-symbols-outlined">more_vert</span>
-                                        </button>
-                                        <div class="hidden absolute right-6 top-12 w-48 bg-white border border-slate-200 rounded-lg shadow-xl z-30 py-1 overflow-hidden"
-                                            id="drop-3">
-                                            <button
-                                                class="w-full text-left px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-2">
-                                                <span class="material-symbols-outlined text-sm">visibility</span> View
-                                                Details
-                                            </button>
-                                            <button
-                                                class="w-full text-left px-4 py-2.5 text-sm text-error hover:bg-error-container/20 flex items-center gap-2 border-t border-slate-50">
-                                                <span class="material-symbols-outlined text-sm">delete</span> Delete
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div
-                        class="px-6 py-4 border-t border-slate-100 flex items-center justify-between text-label-sm text-slate-500">
-                        <span>Showing 1 to 3 of 1,284 users</span>
-                        <div class="flex gap-2">
-                            <button
-                                class="px-3 py-1 rounded border border-slate-200 hover:bg-slate-50 transition-colors disabled:opacity-50"
-                                disabled="">Previous</button>
-                            <button
-                                class="px-3 py-1 rounded border border-slate-200 hover:bg-slate-50 transition-colors">Next</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="section-agents" class="js-section hidden">
-                <div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-500">Sección Agents (pendiente)
-                </div>
-            </section>
-
-            <section id="section-skills" class="js-section hidden">
-                <div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-500">Sección Skills (pendiente)
-                </div>
-            </section>
-
-            <section id="section-contracts" class="js-section hidden">
-                <div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-500">Sección Contracts
-                    (pendiente)</div>
-            </section>
-
-            <section id="section-errors" class="js-section hidden">
-                <div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-500">Sección Error Logs
-                    (pendiente)</div>
-            </section>
+            <section id="section-content"></section>
         </div>
     </main>
-    <!-- Modal: User Details -->
-    <div class="hidden fixed inset-0 z-[60] flex items-center justify-center p-6" id="julian-modal">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
-            onclick="closeModal('julian-modal')"></div>
-        <!-- Modal Content -->
-        <div
-            class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
-            <div class="h-32 bg-primary relative">
-                <button class="absolute top-4 right-4 text-white hover:bg-white/20 p-1 rounded-full transition-colors"
-                    onclick="closeModal('julian-modal')">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-                <div class="absolute -bottom-10 left-8">
-                    <div class="w-20 h-20 rounded-2xl bg-white p-1 border shadow-lg overflow-hidden">
-                        <img alt="Julian Schmidt" class="w-full h-full object-cover rounded-xl"
-                            data-alt="A portrait of Julian Schmidt, a tech professional with a clean, analytical look. He is wearing a minimalist dark shirt and is set against a brightly lit, professional workspace environment with high-contrast architectural shadows and cool blue color grading."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaShP-5g95MHcZLtpMurCEATXpWhrUnOXK_1aZ0UwoQgYd2CscRhhVLK3-NlrEyhYvIQMj47LaFrcerD-HzUZcxmv95JZ-6gpNhDtgxFylafcSIlLhLhrX8UwO1dpfRbA4KbqMSZIi8PP1lCVMvg7JhFUf3502Yx-JXbIdb5hsyB63bDGscrOHQzvwLod00rTx3KcSuthQBoYBDeVu_9s26bebLkjTUzKs4ayRJwmsTAgdaIm-MtVKDvPvzL-wCaSeYfFG5G2qaRK4" />
-                    </div>
-                </div>
-            </div>
-            <div class="px-8 pt-14 pb-8">
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h2 class="text-h2 font-h2">Julian Schmidt</h2>
-                        <p class="text-slate-500">Infrastructure Lead at Agenthub Core</p>
-                    </div>
-                    <span
-                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                        Account Verified
-                    </span>
-                </div>
-                <div class="grid grid-cols-2 gap-8 mb-8">
-                    <div>
-                        <p class="text-label-sm text-slate-400 uppercase tracking-wider mb-2">Primary Email</p>
-                        <p class="font-medium text-slate-900">julian.s@agenthub.io</p>
-                    </div>
-                    <div>
-                        <p class="text-label-sm text-slate-400 uppercase tracking-wider mb-2">Account ID</p>
-                        <p
-                            class="font-mono text-xs text-slate-600 bg-slate-50 px-2 py-1 rounded border border-slate-100">
-                            USR-8829-XJ-01</p>
-                    </div>
-                    <div>
-                        <p class="text-label-sm text-slate-400 uppercase tracking-wider mb-2">Subscription Plan</p>
-                        <p class="font-medium text-blue-600">Enterprise Orchestrator</p>
-                    </div>
-                    <div>
-                        <p class="text-label-sm text-slate-400 uppercase tracking-wider mb-2">Active Agents</p>
-                        <p class="font-medium text-slate-900">24 Running / 3 Pending</p>
-                    </div>
-                </div>
-                <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 mb-8">
-                    <h4 class="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary text-sm">security</span>
-                        Access Permissions
-                    </h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="bg-white border border-slate-200 px-2.5 py-1 rounded-md text-xs font-medium text-slate-600">Full
-                            Cluster Access</span>
-                        <span
-                            class="bg-white border border-slate-200 px-2.5 py-1 rounded-md text-xs font-medium text-slate-600">Billing
-                            Admin</span>
-                        <span
-                            class="bg-white border border-slate-200 px-2.5 py-1 rounded-md text-xs font-medium text-slate-600">API
-                            Key Generation</span>
-                        <span
-                            class="bg-white border border-slate-200 px-2.5 py-1 rounded-md text-xs font-medium text-slate-600">Agent
-                            Deployment</span>
-                    </div>
-                </div>
-                <div class="flex gap-3 justify-end">
-                    <button class="px-4 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-lg transition-colors"
-                        onclick="closeModal('julian-modal')">Close</button>
-                    <button
-                        class="bg-primary text-white px-6 py-2 rounded-lg font-medium shadow-md shadow-primary/20 hover:brightness-110 transition-all">Edit
-                        Profile</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        function toggleDropdown(id) {
-            const dropdown = document.getElementById(id);
-            document.querySelectorAll('[id^="drop-"]').forEach(d => {
-                if (d.id !== id) d.classList.add('hidden');
-            });
-            dropdown.classList.toggle('hidden');
-        }
 
-        function openModal(id) {
-            const modal = document.getElementById(id);
-            modal.classList.remove('hidden');
-            document.querySelectorAll('[id^="drop-"]').forEach(d => d.classList.add('hidden'));
-        }
-
-        function closeModal(id) {
-            const modal = document.getElementById(id);
-            modal.classList.add('hidden');
-        }
-
-        function setSection(sectionName) {
-            document.querySelectorAll('.js-section').forEach(s => s.classList.add('hidden'));
-            const target = document.getElementById(`section-${sectionName}`);
-            if (target) target.classList.remove('hidden');
-
-            document.querySelectorAll('.js-nav-link').forEach(link => {
-                const active = link.dataset.section === sectionName;
-                link.classList.toggle('text-blue-600', active);
-                link.classList.toggle('dark:text-blue-400', active);
-                link.classList.toggle('bg-blue-50/50', active);
-                link.classList.toggle('dark:bg-blue-900/20', active);
-                link.classList.toggle('border-r-2', active);
-                link.classList.toggle('border-blue-600', active);
-                link.classList.toggle('text-slate-500', !active);
-                link.classList.toggle('dark:text-slate-400', !active);
-            });
-        }
-
-        document.querySelectorAll('.js-nav-link').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                setSection(this.dataset.section);
-            });
-        });
-
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', function () {
-                document.documentElement.classList.toggle('dark');
-                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-            });
-        }
-
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-
-        setSection('dashboard');
-
-        window.addEventListener('click', function (e) {
-            if (!e.target.closest('button') && !e.target.closest('[id^="drop-"]')) {
-                document.querySelectorAll('[id^="drop-"]').forEach(d => d.classList.add('hidden'));
-            }
-        });
-    </script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
