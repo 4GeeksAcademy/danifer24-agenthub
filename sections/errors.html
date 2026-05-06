@@ -1,3 +1,144 @@
-<div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-500">
-    Sección Error Logs (pendiente)
+<div class="space-y-6">
+    <div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Log de Errores</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Registro de errores de ejecución de agentes (más recientes primero).
+        </p>
+    </div>
+
+    <div
+        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-visible">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr
+                        class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40">
+                        <th class="px-6 py-4 font-semibold">Timestamp</th>
+                        <th class="px-6 py-4 font-semibold">Agente</th>
+                        <th class="px-6 py-4 font-semibold">Tipo</th>
+                        <th class="px-6 py-4 font-semibold">Descripción</th>
+                        <th class="px-6 py-4 font-semibold text-right">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">2026-05-06 09:14:33</td>
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">SupportBot</td>
+                        <td class="px-6 py-4">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 text-xs font-bold">crítico</span>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Timeout al consultar proveedor externo.
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-error-1')" aria-label="Acciones">⋮</button>
+                                <div id="drop-error-1"
+                                    class="hidden w-48 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('error-modal-1')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-blue-700 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-950/30 border-t border-slate-100 dark:border-slate-800">Marcar
+                                        como resuelto</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">2026-05-06 08:57:10</td>
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">SalesCopilot</td>
+                        <td class="px-6 py-4">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold">warning</span>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Respuesta parcial por límite de tokens.
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-error-2')" aria-label="Acciones">⋮</button>
+                                <div id="drop-error-2"
+                                    class="hidden w-48 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('error-modal-2')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-blue-700 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-950/30 border-t border-slate-100 dark:border-slate-800">Marcar
+                                        como resuelto</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">2026-05-06 08:11:49</td>
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">FinanceAgent</td>
+                        <td class="px-6 py-4">
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">info</span>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Campo opcional ausente en factura,
+                            fallback aplicado.</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-error-3')" aria-label="Acciones">⋮</button>
+                                <div id="drop-error-3"
+                                    class="hidden w-48 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('error-modal-3')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-blue-700 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-950/30 border-t border-slate-100 dark:border-slate-800">Marcar
+                                        como resuelto</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modales de detalle -->
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="error-modal-1">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('error-modal-1')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('error-modal-1')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">SupportBot — TimeoutError</h3>
+        <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">[2026-05-06T09:14:33Z] TimeoutError: Upstream provider did not respond in 12000ms
+at callProvider (services/provider.js:88:17)
+at processMessage (agents/support-bot.js:214:11)
+at async executeTask (runtime/runner.js:51:9)</pre>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="error-modal-2">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('error-modal-2')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('error-modal-2')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">SalesCopilot — TokenLimitWarning</h3>
+        <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">[2026-05-06T08:57:10Z] Warning: Response truncated due to max token budget
+requestId: req_8fj3n2
+model: gpt-4.1-mini
+inputTokens: 7610
+outputTokens: 1024</pre>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="error-modal-3">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('error-modal-3')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('error-modal-3')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">FinanceAgent — ValidationInfo</h3>
+        <pre class="text-xs p-4 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-auto">[2026-05-06T08:11:49Z] Info: Optional field `supplier_phone` missing.
+Fallback strategy used: `continue_with_partial_payload=true`.</pre>
+    </div>
 </div>
