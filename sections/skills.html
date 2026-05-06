@@ -1,3 +1,128 @@
-<div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-500">
-    Sección Skills (pendiente)
+<div class="space-y-6">
+    <div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Skills</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Catálogo de capacidades que pueden habilitarse en agentes.
+        </p>
+    </div>
+
+    <div class="rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/30 p-4">
+        <p class="text-sm text-blue-900 dark:text-blue-200">
+            Una <strong>skill</strong> es una capacidad específica reusable (ej: análisis de sentimiento, sincronización
+            CRM).
+        </p>
+    </div>
+
+    <div
+        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-visible">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr
+                        class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40">
+                        <th class="px-6 py-4 font-semibold">Skill</th>
+                        <th class="px-6 py-4 font-semibold">Descripción</th>
+                        <th class="px-6 py-4 font-semibold">Agentes habilitados</th>
+                        <th class="px-6 py-4 font-semibold text-right">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Sentiment Analysis</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Clasifica el sentimiento en mensajes de
+                            clientes.</td>
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">35</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-skill-1')" aria-label="Acciones">⋮</button>
+                                <div id="drop-skill-1"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('skill-modal-1')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">CRM Sync</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Sincroniza leads, contactos y estado de
+                            oportunidades.</td>
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">21</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-skill-2')" aria-label="Acciones">⋮</button>
+                                <div id="drop-skill-2"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('skill-modal-2')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Ticket Routing</td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">Enruta tickets al equipo correcto por
+                            categoría.</td>
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">18</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-skill-3')" aria-label="Acciones">⋮</button>
+                                <div id="drop-skill-3"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('skill-modal-3')">Ver detalle</button>
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30 border-t border-slate-100 dark:border-slate-800">Eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modales detalle -->
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="skill-modal-1">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('skill-modal-1')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('skill-modal-1')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">Sentiment Analysis</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300">Clasifica tono emocional y polaridad del texto entrante.
+        </p>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="skill-modal-2">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('skill-modal-2')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('skill-modal-2')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">CRM Sync</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300">Sincroniza entidades y eventos con CRM externos.</p>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="skill-modal-3">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('skill-modal-3')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('skill-modal-3')">✕</button>
+        <h3 class="text-xl font-semibold mb-3">Ticket Routing</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300">Clasifica y deriva tickets por prioridad y dominio.</p>
+    </div>
 </div>
