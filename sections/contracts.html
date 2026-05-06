@@ -1,3 +1,170 @@
-<div class="rounded-xl border border-slate-200 bg-white p-6 text-slate-500">
-    Sección Contracts (pendiente)
+<div class="space-y-6">
+    <div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Contrataciones de Agentes</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Historial de contratos, skills incluidas y desglose económico.
+        </p>
+    </div>
+
+    <div
+        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-visible">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr
+                        class="text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40">
+                        <th class="px-6 py-4 font-semibold">Cliente</th>
+                        <th class="px-6 py-4 font-semibold">Agente</th>
+                        <th class="px-6 py-4 font-semibold">Skills contratadas</th>
+                        <th class="px-6 py-4 font-semibold">Fechas</th>
+                        <th class="px-6 py-4 font-semibold">Importe</th>
+                        <th class="px-6 py-4 font-semibold text-right">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">TechCorp</td>
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">SalesCopilot</td>
+                        <td class="px-6 py-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-800">CRM
+                                    Sync</span>
+                                <span class="px-2 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-800">Lead
+                                    Scoring</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">01/01/2026 - 01/04/2026</td>
+                        <td class="px-6 py-4 font-semibold text-slate-900 dark:text-white">$12,800</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-contract-1')" aria-label="Acciones">⋮</button>
+                                <div id="drop-contract-1"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('contract-modal-1')">Ver detalle</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">RetailOne</td>
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">SupportBot</td>
+                        <td class="px-6 py-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-800">Ticket
+                                    Routing</span>
+                                <span class="px-2 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-800">Sentiment
+                                    Analysis</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">15/02/2026 - 15/05/2026</td>
+                        <td class="px-6 py-4 font-semibold text-slate-900 dark:text-white">$9,450</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-contract-2')" aria-label="Acciones">⋮</button>
+                                <div id="drop-contract-2"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('contract-modal-2')">Ver detalle</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                        <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">FinCloud</td>
+                        <td class="px-6 py-4 text-slate-700 dark:text-slate-200">FinanceAgent</td>
+                        <td class="px-6 py-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-800">Invoice
+                                    Parsing</span>
+                                <span class="px-2 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-800">Risk
+                                    Alerts</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-slate-600 dark:text-slate-300">01/03/2026 - 01/06/2026</td>
+                        <td class="px-6 py-4 font-semibold text-slate-900 dark:text-white">$7,980</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="relative inline-block" data-dropdown-root>
+                                <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500"
+                                    onclick="toggleDropdown(event, 'drop-contract-3')" aria-label="Acciones">⋮</button>
+                                <div id="drop-contract-3"
+                                    class="hidden w-44 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl py-1 overflow-hidden">
+                                    <button
+                                        class="w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+                                        onclick="openModal('contract-modal-3')">Ver detalle</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modales de detalle -->
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="contract-modal-1">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('contract-modal-1')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('contract-modal-1')">✕</button>
+        <h3 class="text-xl font-semibold mb-4">Detalle de contrato — TechCorp</h3>
+        <ul class="text-sm space-y-2 text-slate-700 dark:text-slate-200 mb-4">
+            <li><strong>Agente:</strong> SalesCopilot</li>
+            <li><strong>Periodo:</strong> 01/01/2026 - 01/04/2026</li>
+            <li><strong>Total:</strong> $12,800</li>
+        </ul>
+        <div class="rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <div class="px-4 py-2 bg-slate-50 dark:bg-slate-800 text-sm font-semibold">Desglose de skills</div>
+            <div class="px-4 py-3 text-sm flex justify-between"><span>CRM Sync</span><span>$7,000</span></div>
+            <div class="px-4 py-3 text-sm flex justify-between border-t border-slate-100 dark:border-slate-800">
+                <span>Lead Scoring</span><span>$5,800</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="contract-modal-2">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('contract-modal-2')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('contract-modal-2')">✕</button>
+        <h3 class="text-xl font-semibold mb-4">Detalle de contrato — RetailOne</h3>
+        <ul class="text-sm space-y-2 text-slate-700 dark:text-slate-200 mb-4">
+            <li><strong>Agente:</strong> SupportBot</li>
+            <li><strong>Periodo:</strong> 15/02/2026 - 15/05/2026</li>
+            <li><strong>Total:</strong> $9,450</li>
+        </ul>
+        <div class="rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <div class="px-4 py-2 bg-slate-50 dark:bg-slate-800 text-sm font-semibold">Desglose de skills</div>
+            <div class="px-4 py-3 text-sm flex justify-between"><span>Ticket Routing</span><span>$5,100</span></div>
+            <div class="px-4 py-3 text-sm flex justify-between border-t border-slate-100 dark:border-slate-800">
+                <span>Sentiment Analysis</span><span>$4,350</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="hidden fixed inset-0 z-[100] items-center justify-center p-6" id="contract-modal-3">
+    <div class="absolute inset-0 bg-slate-900/50" onclick="closeModal('contract-modal-3')"></div>
+    <div
+        class="relative bg-white dark:bg-slate-900 w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <button class="absolute top-3 right-3 text-slate-500" onclick="closeModal('contract-modal-3')">✕</button>
+        <h3 class="text-xl font-semibold mb-4">Detalle de contrato — FinCloud</h3>
+        <ul class="text-sm space-y-2 text-slate-700 dark:text-slate-200 mb-4">
+            <li><strong>Agente:</strong> FinanceAgent</li>
+            <li><strong>Periodo:</strong> 01/03/2026 - 01/06/2026</li>
+            <li><strong>Total:</strong> $7,980</li>
+        </ul>
+        <div class="rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <div class="px-4 py-2 bg-slate-50 dark:bg-slate-800 text-sm font-semibold">Desglose de skills</div>
+            <div class="px-4 py-3 text-sm flex justify-between"><span>Invoice Parsing</span><span>$4,300</span></div>
+            <div class="px-4 py-3 text-sm flex justify-between border-t border-slate-100 dark:border-slate-800">
+                <span>Risk Alerts</span><span>$3,680</span></div>
+        </div>
+    </div>
 </div>
